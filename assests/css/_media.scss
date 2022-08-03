@@ -1,0 +1,34 @@
+$screens : (
+    sm: 767px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px
+);
+
+@function screens($screen-size){
+    @return map-get($screens, $screen-size);
+}
+
+@mixin media-sm{
+    @media(max-width:screens(sm)){
+        @content;
+    }
+}
+
+@mixin media-md{
+    @media (min-width: screens(md)){
+        @content;
+    }
+}
+
+@mixin media-lg{
+    @media (min-width: screens(lg)){
+        @content;
+    }
+}
+
+@mixin media-xl{
+    @media (min-width: screens(xl)){
+        @content;
+    }
+}

@@ -1,0 +1,646 @@
+@import 'reset';
+@import 'media';
+@import 'boilerplate';
+
+
+%container{
+    margin: 0 auto;
+    padding: 0px 16px;
+}
+
+// responsove container
+.container{
+    @extend %container;
+    @include media-sm{
+        max-width: 540px;
+    }
+    @include media-md{
+        max-width: 800px;
+    }
+    @include media-lg{
+        max-width: 960px;
+    }
+    @include media-xl{
+        max-width: 1170px;
+    }
+}
+
+.header{
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 200;
+    position: fixed;
+    background-color: #fff;
+}
+
+// logo image placement
+.logo{
+    text-align: center;
+    @include media-sm{
+        padding: 32px 0px 20px 0px;
+    }
+    @include media-lg{
+        padding: 32px 0px 40px 0px;
+    }
+}
+
+// hamburger menu styling
+.hamburger{
+    @include media-sm{
+        width: 40px;
+        height: 5px;
+        background-color: #000;
+        position: relative;
+        margin: auto 0;
+        border-radius: 15px;
+        z-index: 1000;
+        cursor: pointer;
+        &::before,&::after{
+            content: '';
+            width: 40px;
+            height: 5px;
+            background-color: #000;
+            position: absolute;
+            border-radius: 15px;
+            transition: 0.25s ease-in-out;
+        }
+        &::before{
+            transform: translateY(-12px);
+        }
+        &::after{
+            transform: translateY(12px);
+        }
+    }
+    @include media-md{
+        display: none;
+    }
+}
+
+// hamburger animation
+.animate-menu{
+    position: relative;
+    background-color: transparent;
+    &::before{
+        transform: rotate(-45deg);
+        position: fixed;
+    }
+    &::after{
+        transform: rotate(45deg);
+        position: fixed;
+
+    }
+}
+
+// navigation styling
+.navigation{
+    font-family: 'Poppins', sans-serif;
+    padding: 16px 0px;
+    &__content{
+        display: flex;
+        justify-content: space-between;
+        a{
+            color: #000;
+        }
+    }
+    &__social-media{
+        @include media-sm{
+            display: none;
+        }
+        @include media-md{
+            &--links{
+                display: flex;
+                gap: 1rem;
+                color: #000;
+            }
+            a{
+                color: #3d4245;
+            }
+        }
+    }
+    &__navbar{
+        @include media-sm{
+            display: none;
+        }
+        @include media-md{
+            &--links{
+                display: flex;
+                gap: 3rem;
+            }
+        }
+        a{
+            font-weight: 500;
+            &:hover{
+                padding: 16px 0px;
+                border-bottom: 2px solid var(--primary-color);
+            }
+        }
+    }
+    &__search{
+        &--icon{
+            cursor: pointer;
+            &:hover{
+                color: var(--primary-color);
+            }
+        }
+        &--overlay{
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            position: fixed;
+            z-index: 500;
+            background-color: rgba(0,0,0,0.9);
+            -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+            display: none;
+        }
+        &--close{
+            color: #fff;
+            top: 24px;
+            right: 25px;
+            font-size: 2rem;
+            position: absolute;
+            cursor: pointer;
+        }
+        &--form{
+            top: 50%;
+            left: 30%;
+            right: 0;
+            position: relative;
+            display: flex;
+        }
+        &--input{
+            width: 40%;
+            font-family: var(--primary-font);
+            padding: 16px;
+        }
+        &--button{
+            border: none;
+            background-color: var(--primary-color);
+            padding: 14px 16px;
+        }
+        &--icon-search{
+            color: #fff;
+        }
+    }
+    a{
+        &:hover{
+            color: var(--primary-color);
+        }
+    }
+    @include media-sm{
+        &__search{
+            &--form{
+                top: 50%;
+                left: 23%;
+                right: 0;
+                position: relative;
+                display: flex;
+            }
+        }
+    }
+    @include media-md{
+        border-bottom: 1px solid #ebeceb;
+    }
+}
+
+// navigation on small screen
+.list-nav{
+    @include media-sm{
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        inset: 200px 0 0 0;
+        text-align: center;
+        z-index: 100;
+        background-color: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(6px);
+        box-shadow: -5px 13px 5px -13px rgba(0,0,0,0.75) inset;
+        &--links{
+            display: flex;
+            flex-direction: column;
+            gap: 4rem;
+            padding-top: 55px;
+        }
+    }
+}
+
+// blog header styling
+.main-blogs{
+    margin-top: 230px;
+    padding: 40px 0px 33px 0px;
+    &__content{
+        gap: 15px;
+        display: grid;
+    }
+    &__right-blog{
+        gap: 15px;
+        display: grid;
+    }
+    &__left-blog{
+        &--image{
+            overflow: hidden;
+            position: relative;
+        }
+        &--texts{
+            left: 0px;
+            bottom: 0px;
+            width: 100%;
+            height: 50%;
+            position: absolute;
+            display: grid;
+            row-gap: 18px;
+            justify-items: start;
+            align-items: end;
+            align-content: end;
+            padding: 0px 32px 40px 32px;
+            border-radius: 0px 0px 4px 4px;
+            background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,212,255,0) 70%);
+        }
+        &--title{
+            color: #fff;
+        }
+        &--details{
+            display: flex;
+            gap:18px;
+        }
+        &--link{
+            color: #fff;
+        }
+        &--author-date{
+            font-size: 0.75rem;
+            line-height: 14px;
+            font-weight: 400;
+        }
+    }
+    @include media-sm{
+        margin-top: 195px;
+        padding: 20px 0px 16.5px 0px;
+        &__content{
+            grid-template-columns: repeat(1,1fr);
+        }
+        &__left-blog{
+            &--texts{
+                row-gap: 9px;
+                padding: 0px 16px 20px 16px;
+            }
+        }
+    }
+    @include media-md{
+        &__content{
+            grid-template-columns: repeat(1,1fr);
+        }
+    }
+    @include media-lg{
+        &__content{
+            grid-template-columns: 62% auto;
+        }
+    }
+}
+
+// hot and fashion topics styling
+.hot-fashion{
+    &__blogs{
+        padding-top: 16px;
+    }
+    &__blogs-left{
+        &--image{
+            position: relative;
+        }
+        &--tag{
+            top: 24px;
+            left: 24px;
+            position: absolute;
+        }
+        &--details{
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            padding: 24px;
+            position: absolute;
+            gap: 16px;
+            display: grid;
+            justify-items: start;
+            align-content: end;
+            border-radius: 0px 0px 4px 4px;
+            background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,212,255,0) 70%);
+        }
+        &--title{
+            color: #fff;
+        }
+        &--paragraph{
+            color: #fff;
+        }
+    }
+    &__blogs-right{
+        display: grid;
+        gap: 22.52px;
+    }    
+    &__small-blogs{
+        &--item{
+            gap: 18.96px;
+            display: grid;
+            grid-template-columns: 76px auto;
+        }
+        &--item-title{
+            font-weight: 500;
+            font-family: var(--secondary-font);
+        }
+        &--item-content{
+            margin: auto 0;
+            display: grid;
+            gap: 15.17px;
+        }
+        &--author-date{
+            font-size: 0.75rem;
+            color: #606060;
+        }
+    }
+    &__fashion{
+        &--blogs{
+            gap: 24px;
+            display: grid;
+        }
+    }
+    @include media-sm{
+        &__blogs{
+            padding-top: 20px;
+        }
+        &__blogs-left{
+            &--details{
+                gap: 8px;
+                padding: 12px;
+            }
+        }
+        &__blogs{
+            gap: 12px;
+            grid-template-columns: repeat(1,1fr);
+        }
+        &__blogs-right{
+            gap: 11.52px;
+            padding-top: 15px;
+        }
+        &__fashion{
+            &--blogs{
+                padding-top: 0px;
+                gap: 12px;
+            }
+        }
+    }
+    @include media-md{
+        &__blogs{   
+            display: grid;
+            gap: 19px;
+            grid-template-columns: 50% auto;
+        }
+    }
+    @include media-lg{
+        &__fashion{
+            padding-top: 0px;
+            &--blogs{
+                padding-top: 0px;
+            }
+        }
+    }
+    @include media-xl{
+        &__content{
+            display: grid;
+            gap: 50px;
+            grid-template-columns: 64% auto;
+        }
+        &__fashion{
+            padding-top: 0px;
+            &--blogs{
+                padding-top: 16px;
+            }
+        }
+    }
+}
+
+// hot-topics styling
+.hot-topics{
+    &__buttons{
+        padding: 0px 0px 0px 29px;
+    }
+    &__blogs{
+        padding-top: 11px;
+    }
+    @include media-sm{
+        &__blogs{
+            padding-top: 0px;
+        }
+    }
+    @include media-lg{
+        padding-top: 33px;
+    }
+}
+
+// diffent category -styling
+.diff-category{
+    &__content{
+        column-gap: 30px;
+        row-gap: 5px;
+        display: grid;
+    }
+    &__blogs{
+        gap: 35px;
+        display: grid;
+        padding-top: 8px;
+    }
+    @include media-sm{
+        &__content{
+            grid-template-columns: repeat(1,1fr);
+        }
+        &__blogs{
+            gap: 17px;
+            padding-top: 0px;
+        }
+    }
+    @include media-md{
+        &__content{
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+    @include media-lg{
+        padding-top: 33px;
+        &__content{
+            grid-template-columns: repeat(3,1fr);
+        }
+        &__tech{
+            padding-top: 0px;
+        }
+    }
+}
+
+// banner styling
+.banner{
+    &__content{
+        column-gap: 20px;
+        row-gap: 20px;
+        display: grid;
+        background-image: url("/assests/img/ads-banner.png");
+        &--button{
+            margin: auto 0;
+        }
+        &--link{
+            color: #fff;
+            font-weight: 500;
+            padding: 12px 24px;
+            line-height: 26px;
+            border-radius: 16px;
+            background-color: var(--primary-color);
+        }
+    }
+    @include media-sm{
+        padding: 26px 0px 16px 0px;
+        &__content{
+            grid-template-columns: repeat(1,1fr);
+            padding: 32px 64px;
+        }
+    }
+    @include media-md{
+        padding: 76px 0px 33px 0px;
+        &__content{
+                grid-template-columns: 50% auto;
+                padding: 32px 64px;
+            }
+        }
+}
+
+.two-category{
+    padding-bottom: 33px;
+    &__content{
+        column-gap: 60px;
+        display: grid;
+    }
+    &__blogs{
+        display: grid;
+        gap: 42px;
+    }
+    &__tech{
+        &--blogs{
+            padding-top: 26px;
+        }
+    }
+    &__popular{
+        &--texts{
+            display: grid;
+            gap: 24px;
+        }
+    }
+    &__buttons{
+        text-align: center;
+        padding: 57.86px 0px 47px 0px ;
+        &--link{
+            padding: 20px 56px;
+            color: var(--primary-color);
+            background-color: #fff;
+            border: 1px solid var(--primary-color);
+            border-radius: 16px;
+            transition: 0.2s ease-in-out;
+            &:hover{
+                border: 1px solid #fff;
+                color: #fff;
+                background-color: var(--primary-color);
+            }
+        }
+        
+    }
+    @include media-sm{
+        padding: 16px 0px;
+        &__buttons{
+            padding: 35px 0px 9.5px 0px;
+        }
+        &__tech{
+            &--blogs{
+                padding-top: 0px;
+            }
+        }
+    }
+    @include media-md{
+        &__content{
+            grid-template-columns: repeat(1,1fr);
+        }        
+    }
+    @include media-lg{
+        &__content{
+            grid-template-columns: 63% auto;
+        }
+        &__blogs{
+            padding-top: 26px;
+        }
+        &__tech{
+            &--blogs{
+                padding-top: 26px;
+            }
+        }
+        &__popular{
+            padding: 20.54px 0px;
+            &--texts{
+                padding-top: 14px;
+            }
+        }
+        &__recent{
+            padding-top: 10.46px;
+        }
+    }
+}
+
+// footer styling
+.footer{
+    text-align: center;
+    padding: 72px 0px 48px 0px;
+    background-color: var(--footer-bg-color);
+    font-family: var(--primary-font);
+    border-bottom: 1px solid #0d180c;
+    &__navbar{
+        padding: 48px 0px;
+        &--links{
+            @include media-sm{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 3rem;
+            }
+            @include media-md{
+                display: flex;
+                justify-content: center;
+                gap: 3rem;
+            }
+        }
+    }
+    &__social-media{
+        &--links{
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+    }
+    a{
+        color: #fff;
+        &:hover{
+            color: var(--primary-color);
+        }
+    }
+}
+
+// footer-copyright section
+.footer-copyright{
+    font-family: var(--primary-font);
+    font-weight: 400;
+    padding: 24px 0px;
+    background-color: var(--footer-bg-color);
+    &__content{
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+    }
+    a{
+        color: #fff;
+        &:hover{
+            color: var(--primary-color);
+        }
+    }
+}
