@@ -25,24 +25,20 @@
     }
 }
 
-.header{
+.header-item{
     top: 0;
     left: 0;
     width: 100%;
     z-index: 200;
-    position: fixed;
+    position: sticky;
     background-color: #fff;
 }
 
 // logo image placement
 .logo{
+    padding: 32px 0px 40px 0px;
     text-align: center;
-    @include media-sm{
-        padding: 32px 0px 20px 0px;
-    }
-    @include media-lg{
-        padding: 32px 0px 40px 0px;
-    }
+    transition: 0.5s ease-in-out;
 }
 
 // hamburger menu styling
@@ -63,7 +59,7 @@
             background-color: #000;
             position: absolute;
             border-radius: 15px;
-            transition: 0.25s ease-in-out;
+                transition: 0.25s ease-in-out;
         }
         &::before{
             transform: translateY(-12px);
@@ -228,7 +224,6 @@
 
 // blog header styling
 .main-blogs{
-    margin-top: 230px;
     padding: 40px 0px 33px 0px;
     &__content{
         gap: 15px;
@@ -275,7 +270,6 @@
         }
     }
     @include media-sm{
-        margin-top: 195px;
         padding: 20px 0px 16.5px 0px;
         &__content{
             grid-template-columns: repeat(1,1fr);

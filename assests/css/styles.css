@@ -35,6 +35,18 @@ h2 {
   line-height: 40px;
   font-family: var(--secondary-font); }
 
+.scroll-animate {
+  text-align: center;
+  transition: 0.5s ease-in-out; }
+
+@media (min-width: 1200px) {
+  .scroll-animate {
+    padding: 0px 0px 0px 0px; } }
+
+.logo-section {
+  padding: 32px 0px 40px 0px;
+  text-align: center; }
+
 .active {
   padding: 16px 0px;
   border-bottom: 2px solid #F21D44; }
@@ -250,24 +262,18 @@ h2 {
   .container {
     max-width: 1170px; } }
 
-.header {
+.header-item {
   top: 0;
   left: 0;
   width: 100%;
   z-index: 200;
-  position: fixed;
+  position: sticky;
   background-color: #fff; }
 
 .logo {
-  text-align: center; }
-
-@media (max-width: 767px) {
-  .logo {
-    padding: 32px 0px 20px 0px; } }
-
-@media (min-width: 992px) {
-  .logo {
-    padding: 32px 0px 40px 0px; } }
+  padding: 32px 0px 40px 0px;
+  text-align: center;
+  transition: 0.5s ease-in-out; }
 
 @media (max-width: 767px) {
   .hamburger {
@@ -426,7 +432,6 @@ h2 {
     padding-top: 55px; } }
 
 .main-blogs {
-  margin-top: 230px;
   padding: 40px 0px 33px 0px; }
 
 .main-blogs__content {
@@ -473,7 +478,6 @@ h2 {
 
 @media (max-width: 767px) {
   .main-blogs {
-    margin-top: 195px;
     padding: 20px 0px 16.5px 0px; }
   .main-blogs__content {
     grid-template-columns: repeat(1, 1fr); }
