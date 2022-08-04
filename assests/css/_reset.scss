@@ -26,6 +26,9 @@ ul{
 
 a, a:active, a:visited{
     text-decoration: none;
+    &:hover{
+        color: var(--primary-color);
+    }
 }
 
 h1{

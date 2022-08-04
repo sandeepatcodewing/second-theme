@@ -25,13 +25,26 @@
     }
 }
 
-.header-item{
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 200;
-    position: sticky;
-    background-color: #fff;
+body{
+    &.has-header-sticky{
+        padding-top: 221px;
+        header{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 999;
+            background-color: #fff;
+        }
+        header.header-item{
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 200;
+            position: fixed;
+            background-color: #fff;
+        }
+    }
 }
 
 // logo image placement
@@ -242,7 +255,6 @@
             left: 0px;
             bottom: 0px;
             width: 100%;
-            height: 50%;
             position: absolute;
             display: grid;
             row-gap: 18px;
@@ -323,9 +335,22 @@
         }
         &--title{
             color: #fff;
+            &:hover{
+                cursor: pointer;
+                color: var(--primary-color);
+            }
         }
         &--paragraph{
             color: #fff;
+        }
+    }
+    &__blogs-image{
+        overflow: hidden;
+        &--item{
+            transition: 0.3s ease-in-out;
+        }
+        &:hover img{
+            transform: scale(1.1);
         }
     }
     &__blogs-right{
@@ -339,6 +364,7 @@
             grid-template-columns: 76px auto;
         }
         &--item-title{
+            color: #000;
             font-weight: 500;
             font-family: var(--secondary-font);
         }
@@ -350,6 +376,9 @@
         &--author-date{
             font-size: 0.75rem;
             color: #606060;
+            &:hover{
+                color: var(--primary-color);
+            }
         }
     }
     &__fashion{
@@ -485,6 +514,11 @@
             line-height: 26px;
             border-radius: 16px;
             background-color: var(--primary-color);
+            &:hover{
+                border: 1px solid var(--primary-color);
+                color: var(--primary-color);
+                background-color: transparent;
+            }
         }
     }
     @include media-sm{
@@ -514,6 +548,9 @@
         gap: 42px;
     }
     &__tech{
+        top: 80px;
+        align-self: flex-start;
+        position: sticky;
         &--blogs{
             padding-top: 26px;
         }
@@ -528,6 +565,8 @@
         text-align: center;
         padding: 57.86px 0px 47px 0px ;
         &--link{
+            font-size: 1.25rem;
+            font-family: var(--primary-font);
             padding: 20px 56px;
             color: var(--primary-color);
             background-color: #fff;
@@ -535,6 +574,7 @@
             border-radius: 16px;
             transition: 0.2s ease-in-out;
             &:hover{
+                cursor: pointer;
                 border: 1px solid #fff;
                 color: #fff;
                 background-color: var(--primary-color);
@@ -636,5 +676,12 @@
         &:hover{
             color: var(--primary-color);
         }
+    }
+}
+
+.second-section{
+    display: none;
+    &__show{
+        display: grid;
     }
 }

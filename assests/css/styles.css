@@ -22,6 +22,9 @@ ul {
 a, a:active, a:visited {
   text-decoration: none; }
 
+a:hover, a:active:hover, a:visited:hover {
+  color: var(--primary-color); }
+
 h1 {
   font-size: clamp(1.5rem, 4vw, 2.265rem);
   line-height: 40px;
@@ -46,6 +49,15 @@ h2 {
 .logo-section {
   padding: 32px 0px 40px 0px;
   text-align: center; }
+
+.thumbnail-wrapper {
+  transition: 0.3s ease-in-out; }
+
+.thumbnail-wrapper:hover {
+  transform: scale(1.1); }
+
+.link-hover:hover {
+  color: var(--primary-color); }
 
 .active {
   padding: 16px 0px;
@@ -99,6 +111,14 @@ h2 {
 .extra-gap {
   gap: 35px; }
 
+.loading-image {
+  display: none;
+  text-align: center; }
+
+.loading-image__show {
+  text-align: center;
+  display: block; }
+
 #extra-padding {
   padding: 0px 65px 0px 12px; }
 
@@ -111,6 +131,12 @@ h2 {
 .blog__image {
   overflow: hidden;
   position: relative; }
+
+.blog__image--item {
+  transition: 0.3s ease-in-out; }
+
+.blog__image:hover img {
+  transform: scale(1.1); }
 
 .blog__details {
   left: 0;
@@ -130,12 +156,19 @@ h2 {
 .blog__details--content {
   padding: 0px 12px 12px 12px; }
 
+.blog__details:hover img {
+  transform: scale(1.1); }
+
 .blog__title {
   color: #fff;
   font-size: 1.125rem;
   line-height: 24px;
   font-weight: 500;
   padding: 14px 0px 18px 0px; }
+
+.blog__title:hover {
+  cursor: pointer;
+  color: var(--primary-color); }
 
 .blog__extra {
   display: flex;
@@ -206,9 +239,12 @@ h2 {
   grid-template-columns: 100px auto; }
 
 .small-blogs__content {
+  display: flex;
+  flex-direction: column;
   margin: auto 0; }
 
 .small-blogs__title {
+  color: #000;
   line-height: 28px;
   font-weight: 500;
   font-family: var(--secondary-font); }
@@ -217,12 +253,18 @@ h2 {
   color: #606060;
   font-size: 0.75rem; }
 
+.small-blogs__author-date:hover {
+  color: var(--primary-color); }
+
 .medium-blogs {
   column-gap: 24px;
   display: grid; }
 
 .medium-blogs__content {
   margin: auto 0; }
+
+.medium-blogs__content--link {
+  color: #000; }
 
 .medium-blogs__poster-details {
   gap: 18px;
@@ -262,12 +304,23 @@ h2 {
   .container {
     max-width: 1170px; } }
 
-.header-item {
+body.has-header-sticky {
+  padding-top: 221px; }
+
+body.has-header-sticky header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background-color: #fff; }
+
+body.has-header-sticky header.header-item {
   top: 0;
   left: 0;
   width: 100%;
   z-index: 200;
-  position: sticky;
+  position: fixed;
   background-color: #fff; }
 
 .logo {
@@ -450,7 +503,6 @@ h2 {
   left: 0px;
   bottom: 0px;
   width: 100%;
-  height: 50%;
   position: absolute;
   display: grid;
   row-gap: 18px;
@@ -521,8 +573,21 @@ h2 {
 .hot-fashion__blogs-left--title {
   color: #fff; }
 
+.hot-fashion__blogs-left--title:hover {
+  cursor: pointer;
+  color: var(--primary-color); }
+
 .hot-fashion__blogs-left--paragraph {
   color: #fff; }
+
+.hot-fashion__blogs-image {
+  overflow: hidden; }
+
+.hot-fashion__blogs-image--item {
+  transition: 0.3s ease-in-out; }
+
+.hot-fashion__blogs-image:hover img {
+  transform: scale(1.1); }
 
 .hot-fashion__blogs-right {
   display: grid;
@@ -534,6 +599,7 @@ h2 {
   grid-template-columns: 76px auto; }
 
 .hot-fashion__small-blogs--item-title {
+  color: #000;
   font-weight: 500;
   font-family: var(--secondary-font); }
 
@@ -545,6 +611,9 @@ h2 {
 .hot-fashion__small-blogs--author-date {
   font-size: 0.75rem;
   color: #606060; }
+
+.hot-fashion__small-blogs--author-date:hover {
+  color: var(--primary-color); }
 
 .hot-fashion__fashion--blogs {
   gap: 24px;
@@ -648,6 +717,11 @@ h2 {
   border-radius: 16px;
   background-color: var(--primary-color); }
 
+.banner__content--link:hover {
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  background-color: transparent; }
+
 @media (max-width: 767px) {
   .banner {
     padding: 26px 0px 16px 0px; }
@@ -673,6 +747,11 @@ h2 {
   display: grid;
   gap: 42px; }
 
+.two-category__tech {
+  top: 80px;
+  align-self: flex-start;
+  position: sticky; }
+
 .two-category__tech--blogs {
   padding-top: 26px; }
 
@@ -685,6 +764,8 @@ h2 {
   padding: 57.86px 0px 47px 0px; }
 
 .two-category__buttons--link {
+  font-size: 1.25rem;
+  font-family: var(--primary-font);
   padding: 20px 56px;
   color: var(--primary-color);
   background-color: #fff;
@@ -693,6 +774,7 @@ h2 {
   transition: 0.2s ease-in-out; }
 
 .two-category__buttons--link:hover {
+  cursor: pointer;
   border: 1px solid #fff;
   color: #fff;
   background-color: var(--primary-color); }
@@ -773,3 +855,9 @@ h2 {
 
 .footer-copyright a:hover {
   color: var(--primary-color); }
+
+.second-section {
+  display: none; }
+
+.second-section__show {
+  display: grid; }

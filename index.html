@@ -20,7 +20,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/ae48f6d481.js" crossorigin="anonymous"></script>
   </head>
-  <body>
+  <body class="has-header-sticky">
     <header class="header">
       <!-- logo section -->
       <section class="logo">
@@ -99,10 +99,16 @@
             <!-- main blog left side blog -->
             <div class="main-blogs__left-blog">
               <div class="main-blogs__left-blog--image">
-                <img class="width-100" src="/assests/img/blogs/blog-1.png" alt="blog one" />
+                <div class="thumbnail-wrapper">
+                  <a href="/">
+                    <img class="width-100" src="/assests/img/blogs/blog-1.png" alt="blog one" />
+                  </a>
+                </div>
                 <div class="main-blogs__left-blog--texts">
                   <span class="category-tag">Fashion</span>
-                  <h1 class="main-blogs__left-blog--title">The Hidden Mystery Behind Fashion</h1>
+                  <a class="thumbnail-wrapper__link" href="">
+                    <h1 class="main-blogs__left-blog--title link-hover">The Hidden Mystery Behind Fashion</h1>
+                  </a>
                   <ul class="main-blogs__left-blog--details">
                     <li>
                       <a class="main-blogs__left-blog--link" href="">
@@ -126,7 +132,7 @@
               <!-- main blog right side blog first blog -->
               <div class="main-blogs__right-blog--first">
                 <div class="blog__image">
-                  <img class="width-100" src="/assests/img/blogs/blog-2.png" alt="blog second" />
+                  <img class="blog__image--item width-100" src="/assests/img/blogs/blog-2.png" alt="blog second" />
                   <div class="blog__details">
                     <span class="category-tag">Life Style</span>
                     <h2 class="blog__title">Prioritizing Your Trend To Get Your Business</h2>
@@ -151,7 +157,7 @@
               <!-- main blog right side blog second blog -->
               <div class="main-blogs__right--blog--second">
                 <div class="blog__image">
-                  <img class="width-100" src="/assests/img/blogs/blog-3.png" alt="third blog" />
+                  <img class="blog__image--item width-100" src="/assests/img/blogs/blog-3.png" alt="third blog" />
                   <div class="blog__details">
                     <span class="category-tag">Life Style</span>
                     <h2 class="blog__title">Prioritizing Your Trend To Get Your Business</h2>
@@ -217,8 +223,8 @@
                     <div class="hot-fashion__item list-item all show-item">
                       <div class="hot-fashion__blogs">
                         <div class="hot-fashion__blogs-left">
-                          <div class="hot-fashion__blogs-left--image">
-                            <img class="width-100" src="/assests/img/blogs/blog-4.png" alt="fourth blog" />
+                          <div class="hot-fashion__blogs-left--image hot-fashion__blogs-image">
+                            <img class="hot-fashion__blogs-image--item width-100" src="/assests/img/blogs/blog-4.png" alt="fourth blog" />
                             <span class="hot-fashion__blogs-left--tag category-tag">Technology</span>
                             <div class="hot-fashion__blogs-left--details">
                               <ul class="blog__extra">
@@ -235,7 +241,9 @@
                                   </a>
                                 </li>
                               </ul>
-                              <h2 class="hot-fashion__blogs-left--title">Intillegent Strategies For The Entrepreneurially Challenged</h2>
+                              <a href="">
+                                <h2 class="hot-fashion__blogs-left--title">Intillegent Strategies For The Entrepreneurially Challenged</h2>
+                              </a>
                               <p class="hot-fashion__blogs-left--paragraph">Theres a growing community of digital world who live a location-independent lifestyle.</p>
                             </div>
                           </div>
@@ -249,7 +257,7 @@
                                 <img src="/assests/img/icons/grey-calendar.png" alt="user" />
                                 <span class="hot-fashion__small-blogs--author-date">February 24, 2022</span>
                               </a>
-                              <p class="hot-fashion__small-blogs--item-title">About Beauty They Are Still Keeping From You</p>
+                              <a href="" class="hot-fashion__small-blogs--item-title">About Beauty They Are Still Keeping From You</a>
                             </div>
                           </div>
                           <!-- small blog 2 -->
@@ -260,7 +268,7 @@
                                 <img src="/assests/img/icons/grey-calendar.png" alt="user" />
                                 <span class="hot-fashion__small-blogs--author-date">February 24, 2022</span>
                               </a>
-                              <p class="hot-fashion__small-blogs--item-title">Questions You Need To Ask About Designer</p>
+                              <a href="" class="hot-fashion__small-blogs--item-title">Questions You Need To Ask About Designer</a>
                             </div>
                           </div>
                           <!-- small blog 3 -->
@@ -271,7 +279,7 @@
                                 <img src="/assests/img/icons/grey-calendar.png" alt="user" />
                                 <span class="hot-fashion__small-blogs--author-date">February 23, 2022</span>
                               </a>
-                              <p class="hot-fashion__small-blogs--item-title">Can The Music Industry Teach You About Beauty</p>
+                              <a href="" class="hot-fashion__small-blogs--item-title">Can The Music Industry Teach You About Beauty</a>
                             </div>
                           </div>
                           <!-- small blog 4 -->
@@ -282,7 +290,7 @@
                                 <img src="/assests/img/icons/grey-calendar.png" alt="user" />
                                 <span class="hot-fashion__small-blogs--author-date">February 23, 2022</span>
                               </a>
-                              <p class="hot-fashion__small-blogs--item-title">Will chip shortage will solved with new sanction?</p>
+                              <a href="" class="hot-fashion__small-blogs--item-title">Will chip shortage will solved with new sanction?</a>
                             </div>
                           </div>
                         </div>
@@ -310,7 +318,9 @@
                                   </a>
                                 </li>
                               </ul>
-                              <h2 class="hot-fashion__blogs-left--title">Intillegent Strategies For The Entrepreneurially Challenged</h2>
+                              <a href="">
+                                <h2 class="hot-fashion__blogs-left--title">Intillegent Strategies For The Entrepreneurially Challenged</h2>
+                              </a>
                               <p class="hot-fashion__blogs-left--paragraph">Theres a growing community of digital world who live a location-independent lifestyle.</p>
                             </div>
                           </div>
@@ -385,7 +395,9 @@
                                   </a>
                                 </li>
                               </ul>
-                              <h2 class="hot-fashion__blogs-left--title">Intillegent Strategies For The Entrepreneurially Challenged</h2>
+                              <a href="">
+                                <h2 class="hot-fashion__blogs-left--title">Intillegent Strategies For The Entrepreneurially Challenged</h2>
+                              </a>
                               <p class="hot-fashion__blogs-left--paragraph">Theres a growing community of digital world who live a location-independent lifestyle.</p>
                             </div>
                           </div>
@@ -462,7 +474,9 @@
                                   </a>
                                 </li>
                               </ul>
-                              <h2 class="hot-fashion__blogs-left--title">Intillegent Strategies For The Entrepreneurially Challenged</h2>
+                              <a href="">
+                                <h2 class="hot-fashion__blogs-left--title">Intillegent Strategies For The Entrepreneurially Challenged</h2>
+                              </a>
                               <p class="hot-fashion__blogs-left--paragraph">Theres a growing community of digital world who live a location-independent lifestyle.</p>
                             </div>
                           </div>
@@ -537,7 +551,9 @@
                                   </a>
                                 </li>
                               </ul>
-                              <h2 class="hot-fashion__blogs-left--title">Intillegent Strategies For The Entrepreneurially Challenged</h2>
+                              <a href="">
+                                <h2 class="hot-fashion__blogs-left--title">Intillegent Strategies For The Entrepreneurially Challenged</h2>
+                              </a>
                               <p class="hot-fashion__blogs-left--paragraph">Theres a growing community of digital world who live a location-independent lifestyle.</p>
                             </div>
                           </div>
@@ -612,7 +628,9 @@
                                   </a>
                                 </li>
                               </ul>
-                              <h2 class="hot-fashion__blogs-left--title">Intillegent Strategies For The Entrepreneurially Challenged</h2>
+                              <a href="">
+                                <h2 class="hot-fashion__blogs-left--title">Intillegent Strategies For The Entrepreneurially Challenged</h2>
+                              </a>
                               <p class="hot-fashion__blogs-left--paragraph">Theres a growing community of digital world who live a location-independent lifestyle.</p>
                             </div>
                           </div>
@@ -677,7 +695,7 @@
               </div>
               <div class="hot-fashion__fashion--blogs">
                 <div class="blog__image">
-                  <img class="width-100" src="/assests/img/blogs/blog-4.5.png" alt="blog second" />
+                  <img class="blog__image--item width-100" src="/assests/img/blogs/blog-4.5.png" alt="blog second" />
                   <div class="blog__details">
                     <span class="category-tag">Fashion</span>
                     <p class="blog__title">How To Become Better With Magazine In 10 Minutes</p>
@@ -702,7 +720,7 @@
                 <div class="small-blogs">
                   <img class="width-100" src="/assests/img/blogs/s-blog-6.png" alt="" />
                   <div class="small-blogs__content">
-                    <p class="small-blogs__title">If Trends Is Bad, Follow this?</p>
+                    <a href="" class="small-blogs__title">If Trends Is Bad, Follow this?</a>
                     <a class="small-blogs__link" href="">
                       <img src="/assests/img/icons/grey-calendar.png" alt="user" />
                       <span class="small-blogs__author-date">February 14, 2022</span>
@@ -712,7 +730,7 @@
                 <div class="small-blogs">
                   <img class="width-100" src="/assests/img/blogs/s-blog-7.png" alt="" />
                   <div class="small-blogs__content">
-                    <p class="small-blogs__title">Never Lose Your Trends Again</p>
+                    <a href="" class="small-blogs__title">Never Lose Your Trends Again</a>
                     <a class="small-blogs__link" href="">
                       <img src="/assests/img/icons/grey-calendar.png" alt="user" />
                       <span class="small-blogs__author-date">February 14, 2022</span>
@@ -750,7 +768,7 @@
                   <!-- hot-topics slider one -->
                   <div class="swiper-slide">
                     <div class="blog__image">
-                      <img class="width-100" src="/assests/img/blogs/hot-topics_6.png" alt="blog second" />
+                      <img class="blog__image--item width-100" src="/assests/img/blogs/hot-topics_6.png" alt="blog second" />
                       <div class="blog__details blog__details--content">
                         <span class="category-tag">Environment</span>
                         <p class="blog__title">The source of Horizon bottled water is the subject of a fierce feud.</p>
@@ -774,7 +792,7 @@
                   <!-- hot-topics slider two -->
                   <div class="swiper-slide">
                     <div class="blog__image">
-                      <img class="width-100" src="/assests/img/blogs/hot-topics_7.png" alt="blog second" />
+                      <img class="blog__image--item width-100" src="/assests/img/blogs/hot-topics_7.png" alt="blog second" />
                       <div class="blog__details blog__details--content">
                         <span class="category-tag">Environment</span>
                         <p class="blog__title">Many nation are pursuing nuclear power as a means of reducing emissions.</p>
@@ -798,7 +816,7 @@
                   <!-- hot-topics slider three -->
                   <div class="swiper-slide">
                     <div class="blog__image">
-                      <img class="width-100" src="/assests/img/blogs/hot-topics_8.png" alt="blog second" />
+                      <img class="blog__image--item width-100" src="/assests/img/blogs/hot-topics_8.png" alt="blog second" />
                       <div class="blog__details blog__details--content">
                         <span class="category-tag">Envrionment</span>
                         <p class="blog__title">Elephants in a Sri Lankan dump are dying from eating plastic rubbish.</p>
@@ -822,7 +840,7 @@
                   <!-- hot-topics slider four -->
                   <div class="swiper-slide">
                     <div class="blog__image">
-                      <img class="width-100" src="/assests/img/blogs/hot-topics_9.png" alt="blog second" />
+                      <img class="blog__image--item width-100" src="/assests/img/blogs/hot-topics_9.png" alt="blog second" />
                       <div class="blog__details blog__details--content">
                         <span class="category-tag">Environment</span>
                         <p class="blog__title">This is the sixth warmest year on record for the planet.</p>
@@ -846,7 +864,7 @@
                   <!-- hot-topics slider five -->
                   <div class="swiper-slide">
                     <div class="blog__image">
-                      <img class="width-100" src="/assests/img/blogs/hot-topics_6.png" alt="blog second" />
+                      <img class="blog__image--item width-100" src="/assests/img/blogs/hot-topics_6.png" alt="blog second" />
                       <div class="blog__details blog__details--content">
                         <span class="category-tag">Environment</span>
                         <p class="blog__title">The source of Horizon bottled water is the subject of a fierce feud.</p>
@@ -870,7 +888,7 @@
                   <!-- hot-topics slider six -->
                   <div class="swiper-slide">
                     <div class="blog__image">
-                      <img class="width-100" src="/assests/img/blogs/hot-topics_7.png" alt="blog second" />
+                      <img class="blog__image--item width-100" src="/assests/img/blogs/hot-topics_7.png" alt="blog second" />
                       <div class="blog__details blog__details--content">
                         <span class="category-tag">Environment</span>
                         <p class="blog__title">Many nation are pursuing nuclear power as a means of reducing emissions.</p>
@@ -894,7 +912,7 @@
                   <!-- hot-topics slider seven -->
                   <div class="swiper-slide">
                     <div class="blog__image">
-                      <img class="width-100" src="/assests/img/blogs/hot-topics_8.png" alt="blog second" />
+                      <img class="blog__image--item width-100" src="/assests/img/blogs/hot-topics_8.png" alt="blog second" />
                       <div class="blog__details blog__details--content">
                         <span class="category-tag">Envrionment</span>
                         <p class="blog__title">Elephants in a Sri Lankan dump are dying from eating plastic rubbish.</p>
@@ -918,7 +936,7 @@
                   <!-- hot-topics slider eight -->
                   <div class="swiper-slide">
                     <div class="blog__image">
-                      <img class="width-100" src="/assests/img/blogs/hot-topics_9.png" alt="blog second" />
+                      <img class="blog__image--item width-100" src="/assests/img/blogs/hot-topics_9.png" alt="blog second" />
                       <div class="blog__details blog__details--content">
                         <span class="category-tag">Environment</span>
                         <p class="blog__title">This is the sixth warmest year on record for the planet.</p>
@@ -942,7 +960,7 @@
                   <!-- hot-topics slider nine -->
                   <div class="swiper-slide">
                     <div class="blog__image">
-                      <img class="width-100" src="/assests/img/blogs/hot-topics_6.png" alt="blog second" />
+                      <img class="blog__image--item width-100" src="/assests/img/blogs/hot-topics_6.png" alt="blog second" />
                       <div class="blog__details blog__details--content">
                         <span class="category-tag">Environment</span>
                         <p class="blog__title">The source of Horizon bottled water is the subject of a fierce feud.</p>
@@ -985,7 +1003,7 @@
                 <div class="small-blogs">
                   <img class="width-100" src="/assests/img/blogs/fashion/fashion_1.png" alt="" />
                   <div class="small-blogs__content">
-                    <p class="small-blogs__title">Truth About Beauty In 3 Little Words</p>
+                    <a href="" class="small-blogs__title">Truth About Beauty In 3 Little Words</a>
                     <a class="small-blogs__link" href="">
                       <img src="/assests/img/icons/grey-calendar.png" alt="user" />
                       <span class="small-blogs__author-date">February 14, 2022</span>
@@ -996,7 +1014,7 @@
                 <div class="small-blogs">
                   <img class="width-100" src="/assests/img/blogs/fashion/fashion_2.png" alt="" />
                   <div class="small-blogs__content">
-                    <p class="small-blogs__title">The Hidden Mystery Behind Fashion</p>
+                    <a href="" class="small-blogs__title">The Hidden Mystery Behind Fashion</a>
                     <a class="small-blogs__link" href="">
                       <img src="/assests/img/icons/grey-calendar.png" alt="user" />
                       <span class="small-blogs__author-date">February 14, 2022</span>
@@ -1007,7 +1025,7 @@
                 <div class="small-blogs">
                   <img class="width-100" src="/assests/img/blogs/fashion/fashion_3.png" alt="" />
                   <div class="small-blogs__content">
-                    <p class="small-blogs__title">Facts Everyone Should Know About Design</p>
+                    <a href="" class="small-blogs__title">Facts Everyone Should Know About Design</a>
                     <a class="small-blogs__link" href="">
                       <img src="/assests/img/icons/grey-calendar.png" alt="user" />
                       <span class="small-blogs__author-date">February 14, 2022</span>
@@ -1018,7 +1036,7 @@
                 <div class="small-blogs">
                   <img class="width-100" src="/assests/img/blogs/fashion/fashion_4.png" alt="" />
                   <div class="small-blogs__content">
-                    <p class="small-blogs__title">Reasons Why The Artist Don't Work</p>
+                    <a href="" class="small-blogs__title">Reasons Why The Artist Don't Work</a>
                     <a class="small-blogs__link" href="">
                       <img src="/assests/img/icons/grey-calendar.png" alt="user" />
                       <span class="small-blogs__author-date">February 14, 2022</span>
@@ -1038,7 +1056,7 @@
                 <div class="small-blogs">
                   <img class="width-100" src="/assests/img/blogs/lifestyle/lifestyle_1.png" alt="" />
                   <div class="small-blogs__content">
-                    <p class="small-blogs__title">Best Home design ideas for 2022.</p>
+                    <a href="" class="small-blogs__title">Best Home design ideas for 2022.</a>
                     <a class="small-blogs__link" href="">
                       <img src="/assests/img/icons/grey-calendar.png" alt="user" />
                       <span class="small-blogs__author-date">February 14, 2022</span>
@@ -1049,7 +1067,7 @@
                 <div class="small-blogs">
                   <img class="width-100" src="/assests/img/blogs/lifestyle/lifestyle_2.png" alt="" />
                   <div class="small-blogs__content">
-                    <p class="small-blogs__title">Best Way to have Fun During Roadtrip</p>
+                    <a href="" class="small-blogs__title">Best Way to have Fun During Roadtrip</a>
                     <a class="small-blogs__link" href="">
                       <img src="/assests/img/icons/grey-calendar.png" alt="user" />
                       <span class="small-blogs__author-date">February 14, 2022</span>
@@ -1060,7 +1078,7 @@
                 <div class="small-blogs">
                   <img class="width-100" src="/assests/img/blogs/lifestyle/lifestyle_3.png" alt="" />
                   <div class="small-blogs__content">
-                    <p class="small-blogs__title">Why should you be eating Organic?</p>
+                    <a href="" class="small-blogs__title">Why should you be eating Organic?</a>
                     <a class="small-blogs__link" href="">
                       <img src="/assests/img/icons/grey-calendar.png" alt="user" />
                       <span class="small-blogs__author-date">February 14, 2022</span>
@@ -1071,7 +1089,7 @@
                 <div class="small-blogs">
                   <img class="width-100" src="/assests/img/blogs/lifestyle/lifestyle_4.png" alt="" />
                   <div class="small-blogs__content">
-                    <p class="small-blogs__title">Solo Travel Around the World</p>
+                    <a href="" class="small-blogs__title">Solo Travel Around the World</a>
                     <a class="small-blogs__link" href="">
                       <img src="/assests/img/icons/grey-calendar.png" alt="user" />
                       <span class="small-blogs__author-date">February 14, 2022</span>
@@ -1091,7 +1109,7 @@
                 <div class="small-blogs">
                   <img class="width-100" src="/assests/img/blogs/tech/tech_1.png" alt="" />
                   <div class="small-blogs__content">
-                    <p class="small-blogs__title">Best Home design ideas for 2022.</p>
+                    <a href="" class="small-blogs__title">Best Home design ideas for 2022.</a>
                     <a class="small-blogs__link" href="">
                       <img src="/assests/img/icons/grey-calendar.png" alt="user" />
                       <span class="small-blogs__author-date">February 14, 2022</span>
@@ -1102,7 +1120,7 @@
                 <div class="small-blogs">
                   <img class="width-100" src="/assests/img/blogs/tech/tech_2.png" alt="" />
                   <div class="small-blogs__content">
-                    <p class="small-blogs__title">Best Way to have Fun During Roadtrip</p>
+                    <a href="" class="small-blogs__title">Best Way to have Fun During Roadtrip</a>
                     <a class="small-blogs__link" href="">
                       <img src="/assests/img/icons/grey-calendar.png" alt="user" />
                       <span class="small-blogs__author-date">February 14, 2022</span>
@@ -1113,7 +1131,7 @@
                 <div class="small-blogs">
                   <img class="width-100" src="/assests/img/blogs/tech/tech_3.png" alt="" />
                   <div class="small-blogs__content">
-                    <p class="small-blogs__title">Why should you be eating Organic?</p>
+                    <a href="" class="small-blogs__title">Why should you be eating Organic?</a>
                     <a class="small-blogs__link" href="">
                       <img src="/assests/img/icons/grey-calendar.png" alt="user" />
                       <span class="small-blogs__author-date">February 14, 2022</span>
@@ -1124,7 +1142,7 @@
                 <div class="small-blogs">
                   <img class="width-100" src="/assests/img/blogs/tech/tech_4.png" alt="" />
                   <div class="small-blogs__content">
-                    <p class="small-blogs__title">Solo Travel Around the World</p>
+                    <a href="" class="small-blogs__title">Solo Travel Around the World</a>
                     <a class="small-blogs__link" href="">
                       <img src="/assests/img/icons/grey-calendar.png" alt="user" />
                       <span class="small-blogs__author-date">February 14, 2022</span>
@@ -1163,13 +1181,15 @@
                 <hr class="title__bar" />
                 <h2 class="title__topics">Don't Miss</h2>
               </div>
-              <!-- two-category blogs -->
+              <!-- two-category blogs one-->
               <div class="two-category__blogs">
                 <!-- two category medium blogs 1 -->
                 <div class="medium-blogs">
                   <img class="width-100" src="/assests/img/blogs/blog-5.png" alt="" />
                   <div class="medium-blogs__content">
-                    <h2>How to Acquire a Job as a Costume Designer in Hollywood.</h2>
+                    <a class="medium-blogs__content--link" href="">
+                      <h2>How to Acquire a Job as a Costume Designer in Hollywood.</h2>
+                    </a>
                     <ul class="medium-blogs__poster-details">
                       <li>
                         <span class="small-blogs__author-date">
@@ -1191,7 +1211,9 @@
                 <div class="medium-blogs">
                   <img class="width-100" src="/assests/img/blogs/blog-6.png" alt="" />
                   <div class="medium-blogs__content">
-                    <h2>In 2022 and Beyond, the Future of Software Development.</h2>
+                    <a class="medium-blogs__content--link" href="">
+                      <h2>In 2022 and Beyond, the Future of Software Development.</h2>
+                    </a>
                     <ul class="medium-blogs__poster-details">
                       <li>
                         <span class="small-blogs__author-date">
@@ -1213,7 +1235,9 @@
                 <div class="medium-blogs">
                   <img class="width-100" src="/assests/img/blogs/blog-7.png" alt="" />
                   <div class="medium-blogs__content">
-                    <h2>Hydro Flask water bottles are up to 30% discount, so stay hydrated.</h2>
+                    <a class="medium-blogs__content--link" href="">
+                      <h2>Hydro Flask water bottles are up to 30% discount, so stay hydrated.</h2>
+                    </a>
                     <ul class="medium-blogs__poster-details">
                       <li>
                         <span class="small-blogs__author-date">
@@ -1235,7 +1259,9 @@
                 <div class="medium-blogs">
                   <img class="width-100" src="/assests/img/blogs/blog-8.png" alt="" />
                   <div class="medium-blogs__content">
-                    <h2>The 13 best and funniest tweets of the week.</h2>
+                    <a class="medium-blogs__content--link" href="">
+                      <h2>The 13 best and funniest tweets of the week.</h2>
+                    </a>
                     <ul class="medium-blogs__poster-details">
                       <li>
                         <span class="small-blogs__author-date">
@@ -1257,7 +1283,9 @@
                 <div class="medium-blogs">
                   <img class="width-100" src="/assests/img/blogs/blog-9.png" alt="" />
                   <div class="medium-blogs__content">
-                    <h2>Rucor is supposedly going to stop creating... well, everything.</h2>
+                    <a class="medium-blogs__content--link" href="">
+                      <h2>Rucor is supposedly going to stop creating... well, everything.</h2>
+                    </a>
                     <ul class="medium-blogs__poster-details">
                       <li>
                         <span class="small-blogs__author-date">
@@ -1277,9 +1305,139 @@
                 </div>
               </div>
 
+              <div class="two-category__blogs second-section">
+                <!-- two category medium blogs 1 -->
+                <div class="medium-blogs">
+                  <img class="width-100" src="/assests/img/blogs/blog-5.png" alt="" />
+                  <div class="medium-blogs__content">
+                    <a class="medium-blogs__content--link" href="">
+                      <h2>How to Acquire a Job as a Costume Designer in Hollywood.</h2>
+                    </a>
+                    <ul class="medium-blogs__poster-details">
+                      <li>
+                        <span class="small-blogs__author-date">
+                          By
+                          <a class="small-blogs__author-date" href="">Sunny Texaz</a>
+                        </span>
+                      </li>
+                      <li>
+                        <a class="medium-blogs__link" href="">
+                          <img src="/assests/img/icons/grey-calendar.png" alt="" />
+                          <span class="small-blogs__author-date">February 14, 2022</span>
+                        </a>
+                      </li>
+                    </ul>
+                    <p class="medium-blogs__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et amet nunc eget. vitae ac vel diam ipsum ...</p>
+                  </div>
+                </div>
+                <!-- two category medium blogs 2 -->
+                <div class="medium-blogs">
+                  <img class="width-100" src="/assests/img/blogs/blog-6.png" alt="" />
+                  <div class="medium-blogs__content">
+                    <a class="medium-blogs__content--link" href="">
+                      <h2>In 2022 and Beyond, the Future of Software Development.</h2>
+                    </a>
+                    <ul class="medium-blogs__poster-details">
+                      <li>
+                        <span class="small-blogs__author-date">
+                          By
+                          <a class="small-blogs__author-date" href="">Sunny Texaz</a>
+                        </span>
+                      </li>
+                      <li>
+                        <a class="medium-blogs__link" href="">
+                          <img src="/assests/img/icons/grey-calendar.png" alt="" />
+                          <span class="small-blogs__author-date">February 14, 2022</span>
+                        </a>
+                      </li>
+                    </ul>
+                    <p class="medium-blogs__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et amet nunc eget. vitae ac vel diam ipsum ...</p>
+                  </div>
+                </div>
+                <!-- two category medium blogs 3 -->
+                <div class="medium-blogs">
+                  <img class="width-100" src="/assests/img/blogs/blog-7.png" alt="" />
+                  <div class="medium-blogs__content">
+                    <a class="medium-blogs__content--link" href="">
+                      <h2>Hydro Flask water bottles are up to 30% discount, so stay hydrated.</h2>
+                    </a>
+                    <ul class="medium-blogs__poster-details">
+                      <li>
+                        <span class="small-blogs__author-date">
+                          By
+                          <a class="small-blogs__author-date" href="">Sunny Texaz</a>
+                        </span>
+                      </li>
+                      <li>
+                        <a class="medium-blogs__link" href="">
+                          <img src="/assests/img/icons/grey-calendar.png" alt="" />
+                          <span class="small-blogs__author-date">February 14, 2022</span>
+                        </a>
+                      </li>
+                    </ul>
+                    <p class="medium-blogs__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et amet nunc eget. vitae ac vel diam ipsum ...</p>
+                  </div>
+                </div>
+                <!-- two category medium blogs 4 -->
+                <div class="medium-blogs">
+                  <img class="width-100" src="/assests/img/blogs/blog-8.png" alt="" />
+                  <div class="medium-blogs__content">
+                    <a class="medium-blogs__content--link" href="">
+                      <h2>The 13 best and funniest tweets of the week.</h2>
+                    </a>
+                    <ul class="medium-blogs__poster-details">
+                      <li>
+                        <span class="small-blogs__author-date">
+                          By
+                          <a class="small-blogs__author-date" href="">Sunny Texaz</a>
+                        </span>
+                      </li>
+                      <li>
+                        <a class="medium-blogs__link" href="">
+                          <img src="/assests/img/icons/grey-calendar.png" alt="" />
+                          <span class="small-blogs__author-date">February 14, 2022</span>
+                        </a>
+                      </li>
+                    </ul>
+                    <p class="medium-blogs__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et amet nunc eget. vitae ac vel diam ipsum ...</p>
+                  </div>
+                </div>
+                <!-- two category medium blogs 5 -->
+                <div class="medium-blogs">
+                  <img class="width-100" src="/assests/img/blogs/blog-9.png" alt="" />
+                  <div class="medium-blogs__content">
+                    <a class="medium-blogs__content--link" href="">
+                      <h2>Rucor is supposedly going to stop creating... well, everything.</h2>
+                    </a>
+                    <ul class="medium-blogs__poster-details">
+                      <li>
+                        <span class="small-blogs__author-date">
+                          By
+                          <a class="small-blogs__author-date" href="">Sunny Texaz</a>
+                        </span>
+                      </li>
+                      <li>
+                        <a class="medium-blogs__link" href="">
+                          <img src="/assests/img/icons/grey-calendar.png" alt="" />
+                          <span class="small-blogs__author-date">February 14, 2022</span>
+                        </a>
+                      </li>
+                    </ul>
+                    <p class="medium-blogs__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et amet nunc eget. vitae ac vel diam ipsum ...</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="loading-image">
+                <img width="250" src="https://i.pinimg.com/originals/b4/4e/22/b44e229598a8bdb7f2f432f246fb0813.gif" alt="">
+              </div>
+
               <!-- two-category button -->
               <div class="two-category__buttons">
-                <a class="two-category__buttons--link" href="">Load More</a>
+                  <button class="two-category__buttons--link">
+                    Load More
+                </button>
+                </a>
               </div>
             </div>
             <!-- Tech Section -->
@@ -1290,7 +1448,7 @@
               </div>
               <div class="two-category__tech--blogs">
                 <div class="blog__image">
-                  <img class="width-100" src="/assests/img/blogs/blog-2.png" alt="blog second" />
+                  <img class="blog__image--item width-100" src="/assests/img/blogs/blog-2.png" alt="blog second" />
                   <div class="blog__details">
                     <span class="category-tag">Technology</span>
                     <p class="blog__title">Prioritizing Your Trend To Get Your Business</p>
@@ -1314,7 +1472,7 @@
                   <div class="small-blogs">
                     <img class="width-100" src="/assests/img/blogs/tech/tech_5.png" alt="" />
                     <div class="small-blogs__content">
-                      <p class="small-blogs__title">New footage from The Batman shows up.</p>
+                      <a href="" class="small-blogs__title">New footage from The Batman shows up.</p>
                       <a class="small-blogs__link" href="">
                         <img src="/assests/img/icons/grey-calendar.png" alt="user" />
                         <span class="small-blogs__author-date">February 14, 2022</span>
@@ -1324,7 +1482,7 @@
                   <div class="small-blogs">
                     <img class="width-100" src="/assests/img/blogs/tech/tech_6.png" alt="" />
                     <div class="small-blogs__content">
-                      <p class="small-blogs__title">Data breaches break record in 2021</p>
+                      <a href="" class="small-blogs__title">Data breaches break record in 2021</p>
                       <a class="small-blogs__link" href="">
                         <img src="/assests/img/icons/grey-calendar.png" alt="user" />
                         <span class="small-blogs__author-date">February 14, 2022</span>
@@ -1371,7 +1529,7 @@
                   <div class="small-blogs">
                     <img class="width-100" src="/assests/img/blogs/tech/tech_1.png" alt="" />
                     <div class="small-blogs__content">
-                      <p class="small-blogs__title">Associated with online buying, which is an issue.</p>
+                      <a href="" class="small-blogs__title">Associated with online buying, which is an issue.</p>
                       <a class="small-blogs__link" href="">
                         <img src="/assests/img/icons/grey-calendar.png" alt="user" />
                         <span class="small-blogs__author-date">February 14, 2022</span>
@@ -1382,7 +1540,7 @@
                   <div class="small-blogs">
                     <img class="width-100" src="/assests/img/blogs/tech/tech_2.png" alt="" />
                     <div class="small-blogs__content">
-                      <p class="small-blogs__title">Which camera is better: the Pixel 6 vs S21 Ultra?</p>
+                      <a href="" class="small-blogs__title">Which camera is better: the Pixel 6 vs S21 Ultra?</p>
                       <a class="small-blogs__link" href="">
                         <img src="/assests/img/icons/grey-calendar.png" alt="user" />
                         <span class="small-blogs__author-date">February 14, 2022</span>
@@ -1393,7 +1551,7 @@
                   <div class="small-blogs">
                     <img class="width-100" src="/assests/img/blogs/tech/tech_3.png" alt="" />
                     <div class="small-blogs__content">
-                      <p class="small-blogs__title">Intel looks to Ohio for a pair of chip factories</p>
+                      <a href="" class="small-blogs__title">Intel looks to Ohio for a pair of chip factories</p>
                       <a class="small-blogs__link" href="">
                         <img src="/assests/img/icons/grey-calendar.png" alt="user" />
                         <span class="small-blogs__author-date">February 14, 2022</span>
@@ -1404,7 +1562,7 @@
                   <div class="small-blogs">
                     <img class="width-100" src="/assests/img/blogs/tech/tech_4.png" alt="" />
                     <div class="small-blogs__content">
-                      <p class="small-blogs__title">Why is Tech giant an important player?</p>
+                      <a href="" class="small-blogs__title">Why is Tech giant an important player?</p>
                       <a class="small-blogs__link" href="">
                         <img src="/assests/img/icons/grey-calendar.png" alt="user" />
                         <span class="small-blogs__author-date">February 14, 2022</span>
@@ -1534,5 +1692,6 @@
     <script src="/assests/js/navbar.js"></script>
     <script src="/assests/js/tab-slider.js"></script>
     <script src="/assests/js/header-animate.js"></script>
+    <script src="/assests/js/blog-content-loader.js"></script>
   </body>
 </html>

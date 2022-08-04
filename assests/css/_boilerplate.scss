@@ -12,6 +12,19 @@
     text-align: center;
 }
 
+.thumbnail-wrapper{
+    transition: 0.3s ease-in-out;
+    &:hover{
+        transform: scale(1.1);
+    }
+}
+
+.link-hover{
+    &:hover{
+        color: var(--primary-color);
+    }
+}
+
 .active{
     padding: 16px 0px;
     border-bottom: 2px solid #F21D44; 
@@ -75,6 +88,14 @@
     gap: 35px;
 }
 
+.loading-image{
+    display: none;
+    text-align: center;
+    &__show{
+        text-align: center;
+        display: block;
+    }
+}
 #extra-padding{
     padding: 0px 65px 0px 12px;
     @include media-sm{
@@ -89,6 +110,12 @@
     &__image{
         overflow: hidden;
         position: relative;
+        &--item{
+            transition: 0.3s ease-in-out;
+        }
+        &:hover img{
+            transform: scale(1.1);
+        }
     }
     &__details{
         left: 0;
@@ -107,6 +134,9 @@
         &--content{
             padding: 0px 12px 12px 12px;
         }
+        &:hover img{
+            transform: scale(1.1);
+        }
     }
     &__title{
         color: #fff;
@@ -114,6 +144,10 @@
         line-height: 24px;
         font-weight: 500;
         padding: 14px 0px 18px 0px;
+        &:hover{
+            cursor: pointer;
+            color: var(--primary-color);
+        }
     }
     &__extra{
         display: flex;
@@ -194,9 +228,12 @@
     display: grid;
     grid-template-columns: 100px auto;
     &__content{
+        display: flex;
+        flex-direction: column;
         margin: auto 0;
     }
     &__title{
+        color: #000;
         line-height: 28px;
         font-weight: 500;
         font-family: var(--secondary-font);
@@ -204,6 +241,9 @@
     &__author-date{
         color: #606060;
         font-size: 0.75rem;
+        &:hover{
+            color: var(--primary-color);
+        }
     }
 }
 
@@ -212,6 +252,9 @@
     display: grid;
     &__content{
         margin: auto 0;
+        &--link{
+            color: #000;
+        }
     }
     &__poster-details{
         gap: 18px;
